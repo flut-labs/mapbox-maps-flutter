@@ -62,6 +62,12 @@ if (file("$rootDir/gradle/ktlint.gradle").exists() && file("$rootDir/gradle/lint
     }
 }
 
+configurations.all {
+    resolutionStrategy {
+        force 'com.mapbox.common:common:24.3.1'
+    }
+}
+
 dependencies {
     implementation "com.mapbox.maps:android:11.3.0"
 
